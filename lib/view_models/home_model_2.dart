@@ -16,7 +16,7 @@ class HomeModel2 extends ChangeNotifier {
     }
   }
 
-  Color _foregroundColor = Colors.accents[0];
+  Color _foregroundColor = Colors.accents[2];
   Color get foregroundColor => _foregroundColor;
   set foregroundColor(Color newValue) {
     if (newValue != _foregroundColor) {
@@ -25,7 +25,7 @@ class HomeModel2 extends ChangeNotifier {
     }
   }
 
-  Color _backgroundColor = Colors.accents[1];
+  Color _backgroundColor = Colors.accents[3];
   Color get backgroundColor => _backgroundColor;
   set backgroundColor(Color newValue) {
     if (newValue != _backgroundColor) {
@@ -45,11 +45,11 @@ class HomeModel2 extends ChangeNotifier {
 
   void swapColors() {
     if (_index % 2 != 0) {
-      backgroundColor = Colors.accents[0];
-      foregroundColor = Colors.accents[1];
+      backgroundColor = Colors.accents[2];
+      foregroundColor = Colors.accents[3];
     } else {
-      backgroundColor = Colors.accents[1];
-      foregroundColor = Colors.accents[0];
+      backgroundColor = Colors.accents[3];
+      foregroundColor = Colors.accents[2];
     }
     notifyListeners();
   }
